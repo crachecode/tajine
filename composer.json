@@ -2,14 +2,19 @@
     "name": "crachecode/tajine",
     "description": "image thumbnail generator",
     "type": "project",
+    "keywords": ["image","resize","cache"],
+    "homepage": "https://github.com/crachecode/tajine",
+    "license": "MIT",
     "require": {
+        "php": ">=5.6.0",
         "intervention/image": "^2.4"
     },
-    "license": "MIT",
     "authors": [
         {
             "name": "Timothée Crozat",
-            "email": "timot+git@crachecode.net"
+            "email": "timot+git@crachecode.net",
+            "homepage": "https://www.crachecode.net",
+            "role": "Developer"
         }
     ],
     "autoload": {
