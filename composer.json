@@ -1,5 +1,6 @@
 {
     "name": "crachecode/tajine",
+    "version": "1.0.0",
     "description": "image thumbnail generator",
     "type": "project",
     "keywords": ["image","resize","cache"],
