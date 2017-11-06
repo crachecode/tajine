@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Crachecode\Tajine;
 
 use Intervention\Image\ImageManager;
 

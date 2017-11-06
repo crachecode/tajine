@@ -18,7 +18,7 @@ require '../vendor/autoload.php';
 $originals_path = dirname(__FILE__).'/img/originals';
 $cache_path = dirname(__FILE__).'/img/cache';
 
-$image = new App\Image();
+$image = new Crachecode\Tajine\Image();
 
 $image->manual = array();
 $params = array('filename','width','height','method','quality','upsize');
