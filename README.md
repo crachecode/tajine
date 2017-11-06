@@ -65,4 +65,8 @@ If only one dimension is specified, unspecified dimension (width or height) will
 If both are specified, image will be cropped if necessary.
 * `max` : image will be resized to fit in specified width and / or height, keeping aspect ratio, without cropping.
 
-Generated thumbnails are saved as image files in ```tajine/public/img/cache``` directory. These files can be deleted to process the generation again.
+### Notes
+
+Generated thumbnails are saved as image files in ```tajine/public/img/cache``` directory.  
+When using mod_rewrite these files names are the same string as the URL provided for images generation. Therefore Apache doesn't even need to process PHP to display the cached version.  
+They can safely be deleted to process the generation again.
