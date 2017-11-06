@@ -16,14 +16,17 @@ Tajine requires PHP 5.6 or higher. Its cache functionality can make use of Apach
 
  1. Clone the repository using Git :  
  `git clone https://github.com/crachecode/tajine.git`
+ 
+ 2. Enter the new directory :  
+ `cd tajine`
 
- 2. Install dependencies using Composer :  
+ 3. Install dependencies using Composer :  
  `composer update`
 
- 3. Allow writing on the cache directory :  
- `chmod 777 tajine/public/cache`
+ 4. Allow writing on the cache directory :  
+ `chmod 777 public/cache`
 
- 4. Define either the ```tajine``` or ```tajine/public``` directory as your VirtualHost root.
+ 5. Define either the ```tajine``` or ```tajine/public``` directory as your VirtualHost root.
 
 ## Using Prestajine
 
