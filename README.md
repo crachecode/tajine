@@ -40,11 +40,11 @@ e.g. :
 `image.1280x1024.basic.90.false.jpg`  
 `image.x1024.jpg`
 
-without rewriting module :  
-```name```.```extension```?w=```width```&h=```height```&m=```method```&q=```quality```&u=```upsize```  
+without mod_rewrite :  
+index.php?filename=```name```.```extension```&width=```width```&height=```height```&method=```method```&quality=```quality```&upsize=```upsize```  
 e.g. :  
-`image.jpg?w=1280&h=1024&m=basic&q=90&u=false`  
-`image.jpg?h=1024`
+`index.php?filename=image.jpg&width=1280&height=1024&method=basic&quality=90&upsize=false`  
+`index.php?filename=image.jpg&height=1024`
 
 ### Parameters
 
