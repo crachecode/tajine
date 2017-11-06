@@ -1,7 +1,7 @@
 Tajine
 ==========
 
-Tajine is a thumbnail generator suitable for any web project following an Apache / PHP approach. It is based on the [Intervention Image](https://github.com/Intervention/image) library.
+Tajine is a thumbnail generator suitable for any web project. It is based on the [Intervention Image](https://github.com/Intervention/image) library.
 
 ## Features
 
@@ -28,7 +28,7 @@ Tajine requires PHP 5.6 or higher. Its cache functionality can make use of Apach
 
  5. Define either the ```tajine``` or ```tajine/public``` directory as your VirtualHost root.
 
-## Using Prestajine
+## Using Tajine
 
 Original Images should be placed in ```tajine/public/img/originals``` directory.
 
