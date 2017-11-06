@@ -32,19 +32,20 @@ Tajine requires PHP 5.6 or higher. Its cache functionality can make use of Apach
 
 Original Images should be placed in ```tajine/public/img/originals``` directory.
 
-Image at any dimension can then be accessed following one of these syntaxes :
+Image at any dimension can then be accessed in HTTP following one of these URL syntaxes :
 
 with apache and mod_rewrite :  
-```name```.```width```x```height```.```method```.```quality```.```upsize```.```extension```  
+`{name}.{width}x{height}.{method}.{quality}.{upsize}.{extension}`  
 e.g. :  
-`image.1280x1024.basic.90.false.jpg`  
-`image.x1024.jpg`
+* `image.1280x1024.basic.90.false.jpg` (width = 1280px, height = 1024px, basic method, jpg quality 90, no upsizing)  
+* `image.1280x.false.jpg` (width = 1280px, no height specified, no upsizing)  
+* `image.x1024.jpg` (height = 1024px, no width specified)  
 
 without mod_rewrite :  
-index.php?filename=```name```.```extension```&width=```width```&height=```height```&method=```method```&quality=```quality```&upsize=```upsize```  
+`index.php?filename={name}.{extension}&width={width}&height={height}&method={method}&quality={quality}&upsize={upsize}`  
 e.g. :  
-`index.php?filename=image.jpg&width=1280&height=1024&method=basic&quality=90&upsize=false`  
-`index.php?filename=image.jpg&height=1024`
+* `index.php?filename=image.jpg&width=1280&height=1024&method=basic&quality=90&upsize=false`  
+* `index.php?filename=image.jpg&height=1024`
 
 ### Parameters
 
