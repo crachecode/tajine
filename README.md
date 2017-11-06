@@ -31,7 +31,7 @@ Original Images should be placed in ```tajine/public/img/originals``` directory.
 
 Image at any dimension can then be accessed following one of these syntaxes :
 
-with apache any the rewriting module :
+with apache and mod_rewrite :
 ```name```.```width```x```height```.```method```.```quality```.```upsize```.```extension```  
 e.g. :  
 `image.1280x1024.basic.90.false.jpg`  
@@ -45,15 +45,15 @@ e.g. :
 
 ### Parameters
 
-| name          | value type                          | description                                                                   | default       |
-| ---           | ---                                 | ---                                                                           | ---           |
-| ```name```    | string                              | filename as accessible in ```tajine/public/img/originals``` without extension | n/a, required |
-| ```name```    | string                              | extension of filename as accessible in ```tajine/public/img/originals```      | n/a, required |
-| ```width```   | integer                             | thumbnail width (in pixel)                                                    | n/a           |
-| ```height```  | integer                             | thumbnail height (in pixel)                                                   | n/a           |
-| ```method```  | ```basic```, ```fit``` or ```max``` | resizing behaviour, see next paragraph                                        | ```fit```     |
-| ```quality``` | integer, ```0``` to ```100```       | thumbnail quality, bigger is better but files are heavier                     | ```85```      |
-| ```upsize```  | boolean                             | whether or not small images should be enlarged with larger thumbnail size     | ```true```    |
+| name            | value type                          | description                                                                   | default       |
+| ---             | ---                                 | ---                                                                           | ---           |
+| ```name```      | string                              | filename as accessible in ```tajine/public/img/originals``` without extension | n/a, required |
+| ```extension ```| string                              | extension of filename as accessible in ```tajine/public/img/originals```      | n/a, required |
+| ```width```     | integer                             | thumbnail width (in pixel)                                                    | n/a           |
+| ```height```    | integer                             | thumbnail height (in pixel)                                                   | n/a           |
+| ```method```    | ```basic```, ```fit``` or ```max``` | resizing behaviour, see next paragraph                                        | ```fit```     |
+| ```quality```   | integer, ```0``` to ```100```       | thumbnail quality, bigger is better but files are heavier                     | ```85```      |
+| ```upsize```    | boolean                             | whether or not small images should be enlarged with larger thumbnail size     | ```true```    |
 
 **Method** can be set to :
 * `basic` : image will be resized to the exact dimension, without keeping aspect ratio.
