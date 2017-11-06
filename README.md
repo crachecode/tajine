@@ -24,7 +24,7 @@ Tajine requires PHP 5.6 or higher. Its cache functionality can make use of Apach
  `composer update`
 
  4. Allow writing on the cache directory :  
- `chmod 777 public/cache`
+ `chmod 777 public/img/cache`
 
  5. Define either the ```tajine``` or ```tajine/public``` directory as your VirtualHost root.
 
