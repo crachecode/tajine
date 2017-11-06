@@ -5,8 +5,8 @@ Tajine is a thumbnail generator suitable for any web project following an Apache
 
 ## Features
 
-Tajine allows you to create resize images at any dimensions, in a flexible way.
-Image can be called directly at any URL (using the ```src``` parameter of an ```img``` HTML tag e.g.), every resizing parameters can be included as the parameters and Tajine is caching te result automatically.
+Tajine allows you to resize images at any dimensions, in a flexible way, and cache the generated image.
+This image can be called directly at a specific size by passing parameters in the URL. This URL can be used in a HTML file as the ```src``` parameter of an ```img``` tag e.g.
 
 ## Requirements
 
@@ -31,13 +31,13 @@ Original Images should be placed in ```tajine/public/img/originals``` directory.
 
 Image at any dimension can then be accessed following one of these syntaxes :
 
-with apache and mod_rewrite :
+with apache and mod_rewrite :  
 ```name```.```width```x```height```.```method```.```quality```.```upsize```.```extension```  
 e.g. :  
 `image.1280x1024.basic.90.false.jpg`  
 `image.x1024.jpg`
 
-without rewriting module :
+without rewriting module :  
 ```name```.```extension```?w=```width```&h=```height```&m=```method```&q=```quality```&u=```upsize```  
 e.g. :  
 `image.jpg?w=1280&h=1024&m=basic&q=90&u=false`  
