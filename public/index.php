@@ -20,8 +20,8 @@ $cache_path = dirname(__FILE__).'/img/cache';
 
 $image = new App\Image();
 
-$image->manual = [];
-$params = ['filename','width','height','method','quality','upsize'];
+$image->manual = array();
+$params = array('filename','width','height','method','quality','upsize');
 foreach ($params as $param) {
 	if (isset($_GET[$param]) && !empty($_GET[$param])){
 		$image->$param = $_GET[$param];

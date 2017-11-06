@@ -22,11 +22,11 @@ class Image extends ImageManager {
 	protected $image;
 	protected $file;
 
-	protected $defaults = [
+	protected $defaults = array(
 		'method' => 'fit',
 		'quality' => 85,
 		'upsize' => true
-	];
+	);
 
 	public function __construct(array $config = array()){
 		parent::__construct($config);
