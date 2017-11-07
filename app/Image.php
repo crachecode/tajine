@@ -81,6 +81,9 @@ class Image extends ImageManager {
 					if (!$this->upsize || $this->upsize == 'false') $constraint->upsize();
 				});
 		}
+		if (!file_exists($this->cache_path)) {
+			mkdir($this->cache_path, 0777, true);
+		}
 		$this->image->save($this->file, $this->quality);
 	}
 
