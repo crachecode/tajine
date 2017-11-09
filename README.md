@@ -1,7 +1,7 @@
 Tajine
 ==========
 
-Tajine is a images and thumbnails generator suitable for any web project. It is based on the [Intervention Image](https://github.com/Intervention/image) library.
+Tajine is an images and thumbnails generator suitable for any web project. It is based on the [Intervention Image](https://github.com/Intervention/image) library.
 
 ## Features
 
@@ -32,7 +32,7 @@ Tajine requires PHP 5.6 or higher. Its cache functionality can make use of Apach
 
 Original Images should be placed in `tajine/public/img/originals` directory.
 
-Image at any dimension can then be accessed in HTTP following one of these URL syntaxes :
+Images at any dimension can then be accessed via HTTP following this URL syntax :
 
 `{name}.{width}x{height}.{method}.{quality}.{upsize}.{extension}`
 
@@ -61,7 +61,7 @@ If only one dimension is specified, unspecified dimension (width or height) will
 If both are specified, image will be cropped if necessary.
 * `max` : image will be resized to fit in specified width and / or height, keeping aspect ratio, without cropping.
 
-## Without mod_rewrite
+### Without mod_rewrite
 
 You should still be able to use Tajine without mod_rewrite or with a HTTP server other than Apache. However the images URLs to call would be a bit different (and not so nice) :
  
