@@ -16,6 +16,8 @@ class Image extends ImageManager {
 	public $upsize;
 	public $manual;
 
+	public $subdir;
+
 	public $originals_path;
 	public $cache_path;
 
@@ -25,7 +27,8 @@ class Image extends ImageManager {
 	protected $defaults = array(
 		'method' => 'fit',
 		'quality' => 85,
-		'upsize' => true
+		'upsize' => true,
+		'subdir' => true
 	);
 
 	public function __construct(array $config = array()){
@@ -33,6 +36,7 @@ class Image extends ImageManager {
 		$this->method = $this->defaults['method'];
 		$this->quality = $this->defaults['quality'];
 		$this->upsize = $this->defaults['upsize'];
+		$this->subdir = $this->defaults['subdir'];
 	}
 
 	protected function exists()
@@ -40,8 +44,15 @@ class Image extends ImageManager {
 		return file_exists($this->file);
 	}
 
-	protected function create()
+	protected function create() // save file
 	{
+
+		if ($this->subdir) {
+			if (!file_exists($this->cache_path.'/'.$this->basename)) { //*********************AJOUT */
+				mkdir($this->cache_path.'/'.$this->basename, 0777, true);
+			}
+		}
+
 		// to finally create image instances
 		//echo 'img/'.$this->basename.'/original.'.$this->extension;
 		//echo $this->image_path.$this->basename.'/original.'.$this->extension;
@@ -87,10 +98,10 @@ class Image extends ImageManager {
 		$this->image->save($this->file, $this->quality);
 	}
 
-	public function show()
+	public function show() // save file if not exist and show image
 	{
 		//$this->file = $this->cache_path.'/'.$this->basename.'.'.$this->width.'x'.$this->height.'.'.$this->method.'.'.$this->quality.'.'.$this->upsize.'.'.$this->extension;
-		$this->file = $this->cache_path.'/'.$this->basename.'.';
+		$this->file = $this->cache_path.'/'.$this->basename.'/'.$this->basename.'.';
 		if (isset($this->manual['width'])) $this->file .= $this->width;
 		$this->file .= 'x';
 		if (isset($this->manual['height'])) $this->file .= $this->height;

@@ -53,6 +53,7 @@ e.g. :
 | `method`    | `basic`, `fit` or `max` | resizing behaviour, see next paragraph                                    | `fit`         |
 | `quality`   | integer, `0` to `100`   | thumbnail quality, bigger is better but files are heavier                 | `85`          |
 | `upsize`    | boolean                 | whether or not small images should be enlarged with larger thumbnail size | `true`        |
+| `subdir`    | boolean                 | create a subdirectory for each image                                      | `true`        |
 
 **Method** can be set to :
 * `basic` : image will be resized to the exact dimension, without keeping aspect ratio.
